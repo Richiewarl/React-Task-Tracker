@@ -1,15 +1,17 @@
 import PropTypes from "prop-types"
 import Button from "./Button" 
+import { FaExpandAlt, FaWindowClose } from "react-icons/fa";
 
-const Header = ({ title }) => {
-  const onClick = () => {
-    console.log("Click")
-  }
+const Header = ({ title, toggleAddTask, showAddTask }) => {
   
   return (
     <header className="header">
         <h1>{title}</h1>
-        <Button color="green" text=" Add New Task" onClick={onClick} />
+        <Button 
+          color={showAddTask ? "indianred" : "forestgreen" }
+          text={showAddTask ? "Collapse" : "Add Task"}
+          icon={!showAddTask ? <FaExpandAlt className="collapseIcons" /> : <FaWindowClose className="expandIcons" />}
+          onClick={toggleAddTask} />
     </header>
   )
 }
@@ -19,7 +21,9 @@ Header.defaultProps =  {
 }
 
 Header.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  toggleAddTask: PropTypes.func,
+  showAddTask: PropTypes.bool
 }
 
 export default Header
