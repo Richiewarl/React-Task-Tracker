@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import Button from "./Button" 
-import { FaExpandAlt, FaWindowClose } from "react-icons/fa";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
 const Header = ({ title, toggleAddTask, showAddTask }) => {
   
@@ -10,7 +10,7 @@ const Header = ({ title, toggleAddTask, showAddTask }) => {
         <Button 
           color={showAddTask ? "indianred" : "forestgreen" }
           text={showAddTask ? "Collapse" : "Add Task"}
-          icon={!showAddTask ? <FaExpandAlt className="collapseIcons" /> : <FaWindowClose className="expandIcons" />}
+          icon={!showAddTask ? <FaPlus className="icons expand" /> : <FaMinus className="icons collapse" />}
           onClick={toggleAddTask} />
     </header>
   )

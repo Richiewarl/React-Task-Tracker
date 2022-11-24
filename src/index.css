@@ -112,12 +112,7 @@ footer {
 }
 
 /* Icons */
-.collapseIconsIcons {
-  position: relative;
-  bottom: -3px;
-}
-
-.expandIconsIcons {
+.icons {
   position: relative;
   bottom: -2px;
-}
+ }
