@@ -1,8 +1,8 @@
 import { useState } from "react"
 
 const AddTask = ({ onAdd }) => {
-  const [text, setText] = useState()
-  const [day, setDay] = useState()
+  const [text, setText] = useState("")
+  const [day, setDay] = useState("")
   const [reminder, setReminder] = useState(false)
 
   const onSubmit = (e) => {
@@ -39,7 +39,7 @@ const AddTask = ({ onAdd }) => {
           <label>Set Reminder</label>
           <input 
             type="checkbox"
-            // checked={reminder}
+            checked={reminder}
             onChange={(e) => setReminder(e.currentTarget.checked)}  
             value={reminder} />
       </div>
