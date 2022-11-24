@@ -9,8 +9,7 @@ const AddTask = ({ onAdd }) => {
     e.preventDefault()
 
     if (!text) { alert("Please add a task") }
-
-    onAdd({ text, day, reminder })
+    else { onAdd({ text, day, reminder }) }
 
     setText("")
     setDay("")
@@ -44,7 +43,7 @@ const AddTask = ({ onAdd }) => {
             value={reminder} />
       </div>
 
-      <input className="btn btn-block" type="submit" value="Save Task" />
+      <input id="saveTask" className="btn btn-block" type="submit" value="Save Task" />
     </form>
   )
 }

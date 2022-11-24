@@ -27,6 +27,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   background: #000;
@@ -54,6 +55,11 @@ body {
   width: 100%;
 }
 
+#saveTask {
+  background: forestgreen;
+}
+
+/* Task */
 .task {
   background: #f4f4f4;
   margin: 5px;
