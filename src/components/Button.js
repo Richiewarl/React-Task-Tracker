@@ -1,5 +1,4 @@
 import PropTypes from "prop-types"
-import React from 'react'
 
 const Button = ({ color, text, onClick, icon }) => {
   return (
@@ -15,12 +14,13 @@ const Button = ({ color, text, onClick, icon }) => {
 
 Button.defaultProps = {
     color: "Black",
-    text: "Empty"
+    text: "Default Text..."
 }
 
 Button.propTypes = {
     color: PropTypes.string,
     text: PropTypes.string,
+    onclick: PropTypes.func,
     icon: PropTypes.element
 }
 
